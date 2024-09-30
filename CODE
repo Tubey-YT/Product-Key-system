@@ -1,0 +1,24 @@
+@echo off
+:Key
+setlocal enabledelayedexpansion
+
+:: Define your valid product key here
+set "validKey=YOUR KEY"
+
+:: Prompt the user for the product key
+echo Enter your product key:
+set /p userKey="Product Key: "
+
+:: Check if the entered key matches the valid key
+if "!userKey!"=="!validKey!" (
+    echo.
+    echo Product key is valid! Access granted.
+) else (
+    echo.
+    echo Invalid product key. Access denied.
+
+)
+
+echo.
+
+pause
